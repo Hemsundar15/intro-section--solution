@@ -1,18 +1,28 @@
 @use "../abstracts";
 
 .hero {
+    padding-top: 66px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    background-color: abstracts.$white--clr;
 
     &__illustrationholder {
         .mobile {
             width: 100%;
         }
+
+        .desktop {
+            display: none;
+        }
     }
 
     &__content {
         padding: 52px 16px;
+        text-align: center;
+
+        br {
+            display: none;
+        }
 
         .cta {
             margin-top: 28px;
@@ -22,6 +32,14 @@
             border-radius: 10px;
             color: abstracts.$white--clr;
             background-color: abstracts.$black--clr;
+            transition: 0.4s;
+            border: 1px solid abstracts.$white--clr;
+
+            &:hover {
+                background-color: abstracts.$white--clr;
+                color: abstracts.$black--clr;
+                border: 1px solid abstracts.$black--clr;
+            }
         }
 
         .clientsholder {
@@ -29,6 +47,55 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        flex-direction: row-reverse;
+        padding-top: 130px;
+
+        &__content {
+            height: calc(100vh - 130px - 80px);
+            padding: 0;
+            padding-left: 165px;
+            padding-top: clamp(30px, 7.5vh, 100px);
+
+            width: 50%;
+
+            text-align: left;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            br {
+                display: block;
+            }
+
+            .cta {
+                margin-top: 0;
+                width: 150px;
+            }
+
+            .clientsholder {
+                margin-top: clamp(30px, 5vh, 50px);
+            }
+        }
+
+        &__illustrationholder {
+            height: calc(100vh - 80px - 130px);
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            .desktop {
+                display: block;
+                height: 100%;
+            }
+
+            .mobile {
+                display: none;
+            }
         }
     }
 }

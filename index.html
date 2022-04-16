@@ -22,21 +22,63 @@
         <header class="header">
             <a href="" class="logo">snap</a>
 
-            <img
-                src="./assets/icon-menu.svg"
-                id="hamburger"
-                class="header__hamburger"
-                alt=""
-            />
+            <img id="hamburger" class="header__hamburger" alt="" />
 
-            <!-- <nav class="header__nav"></nav> -->
+            <nav class="header__desktopnav">
+                <div class="navlinks">
+                    <div class="desktopdropdown" id="dropdown">
+                        <div class="desktopdropdown__title">
+                            <a class="navlinks__title">Features</a>
+                            <img src="./assets/icon-arrow-down.svg" alt="" />
+                        </div>
+                        <div class="desktopdropdown__contentwrapper">
+                            <div class="content">
+                                <img src="./assets/icon-todo.svg" alt="" />
+                                <a>Todo List</a>
+                            </div>
+                            <div class="content">
+                                <img src="./assets/icon-calendar.svg" alt="" />
+                                <a>Calender</a>
+                            </div>
+                            <div class="content">
+                                <img src="./assets/icon-reminders.svg" alt="" />
+                                <a>Reminders</a>
+                            </div>
+                            <div class="content">
+                                <img src="./assets/icon-planning.svg" alt="" />
+                                <a>Planning</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="desktopdropdown" id="dropdown">
+                        <div class="desktopdropdown__title">
+                            <a class="navlinks__title">Company</a>
+                            <img src="./assets/icon-arrow-down.svg" alt="" />
+                        </div>
+                        <div class="desktopdropdown__contentwrapper">
+                            <a>History</a>
+                            <a>Our Team</a>
+                            <a>Blog</a>
+                        </div>
+                    </div>
+                    <a href="" class="navlinks__title">Careers</a>
+                    <a href="" class="navlinks__title">About</a>
+                </div>
+
+                <div class="authlinks">
+                    <a href="" class="login">Login</a>
+                    <a href="" class="register">Register</a>
+                </div>
+            </nav>
+
             <nav class="header__mobilenav" id="mobilenav">
-                <div class="dropdown" id="dropdown">
-                    <div class="dropdown__title">
+                <div class="mobiledropdown" id="dropdown">
+                    <div class="mobiledropdown__title">
                         <a>Features</a>
                         <img src="./assets/icon-arrow-down.svg" alt="" />
                     </div>
-                    <div class="dropdown__contentwrapper">
+                    <div class="mobiledropdown__contentwrapper">
                         <div class="content">
                             <img src="./assets/icon-todo.svg" alt="" />
                             <a>Todo List</a>
@@ -55,12 +97,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="dropdown" id="dropdown">
-                    <div class="dropdown__title">
+                <div class="mobiledropdown" id="dropdown">
+                    <div class="mobiledropdown__title">
                         <a>Company</a>
                         <img src="./assets/icon-arrow-down.svg" alt="" />
                     </div>
-                    <div class="dropdown__contentwrapper">
+                    <div class="mobiledropdown__contentwrapper">
                         <a>History</a>
                         <a>Our Team</a>
                         <a>Blog</a>
@@ -78,9 +120,17 @@
                     src="./assets/image-hero-mobile.png"
                     alt=""
                 />
+                <img
+                    class="desktop"
+                    src="./assets/image-hero-desktop.png"
+                    alt=""
+                />
             </div>
             <div class="hero__content">
-                <h1 class="title">Make remote work</h1>
+                <h1 class="title">
+                    Make <br />
+                    remote work
+                </h1>
                 <p class="description">
                     Get your team in sync, no matter your location. Streamline
                     processes, create team rituals, and watch productivity soar.
@@ -95,5 +145,21 @@
                 </div>
             </div>
         </main>
+
+        <div
+            style="
+                position: absolute;
+                left: 50%;
+                bottom: 10px;
+                transform: translate(-50%);
+            "
+        >
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5"
+                >Frontend Mentor</a
+            >, Completed by
+            <a href="https://hemdev.vercel.app">Hemsundar Paranthaman</a>.
+        </div>
     </body>
 </html>

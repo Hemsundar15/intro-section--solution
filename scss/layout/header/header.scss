@@ -1,0 +1,103 @@
+@use "./../../abstracts";
+
+.header {
+    padding: 16px 16px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: abstracts.$white--clr;
+
+    z-index: 10;
+
+    &__hamburger {
+        z-index: 100;
+    }
+
+    &__mobilenav {
+        position: fixed;
+        min-height: 100vh;
+        width: 240px;
+        background-color: abstracts.$white--clr;
+        padding: 80px 24px;
+        z-index: 50;
+
+        right: -100%;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transition: 0.4s;
+    }
+
+    &__mobilenav.active {
+        right: 0;
+    }
+
+    &__desktopnav {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .navlinks {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            &__title {
+                color: abstracts.$gray--clr;
+
+                &:hover {
+                    color: abstracts.$black--clr;
+                }
+            }
+        }
+
+        .authlinks {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .login {
+                color: abstracts.$gray--clr;
+
+                &:hover {
+                    color: abstracts.$black--clr;
+                }
+            }
+
+            .register {
+                padding: 14px 24px;
+                border-radius: 10px;
+                letter-spacing: -0.5px;
+                color: abstracts.$black--clr;
+                border: 1px solid abstracts.$gray--clr;
+                transition: 0.4s;
+
+                &:hover {
+                    border: 2px solid abstracts.$black--clr;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1400px) {
+        gap: 64px;
+        padding: 24px 40px;
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__mobilenav {
+            display: none;
+        }
+
+        &__desktopnav {
+            display: flex;
+        }
+    }
+}

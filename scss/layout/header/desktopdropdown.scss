@@ -1,0 +1,56 @@
+@use "./../../abstracts";
+
+.desktopdropdown {
+    position: relative;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &__contentwrapper {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 24px;
+
+        padding: 20px;
+
+        background-color: abstracts.$white--clr;
+        border-radius: 10px;
+
+        box-shadow: 0px 0px 100px 0px;
+
+        .content {
+            display: flex;
+            gap: 10px;
+            padding: 8px 0;
+
+            a {
+                padding: 0;
+            }
+        }
+
+        a {
+            padding: 8px 0;
+            color: abstracts.$gray--clr;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+}
+
+.desktopdropdown.active {
+    .desktopdropdown__title {
+        a {
+            color: black !important;
+        }
+    }
+
+    .desktopdropdown__contentwrapper {
+        display: flex;
+    }
+}
