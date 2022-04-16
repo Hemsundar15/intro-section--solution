@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | Intro section with dropdown navigation</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+        <script defer type="module" src="./main.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="" class="logo">snap</a>
+
+            <img
+                src="./assets/icon-menu.svg"
+                id="hamburger"
+                class="header__hamburger"
+                alt=""
+            />
+
+            <!-- <nav class="header__nav"></nav> -->
+            <nav class="header__mobilenav" id="mobilenav">
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdown__title">
+                        <a>Features</a>
+                        <img src="./assets/icon-arrow-down.svg" alt="" />
+                    </div>
+                    <div class="dropdown__contentwrapper">
+                        <div class="content">
+                            <img src="./assets/icon-todo.svg" alt="" />
+                            <a>Todo List</a>
+                        </div>
+                        <div class="content">
+                            <img src="./assets/icon-calendar.svg" alt="" />
+                            <a>Calender</a>
+                        </div>
+                        <div class="content">
+                            <img src="./assets/icon-reminders.svg" alt="" />
+                            <a>Reminders</a>
+                        </div>
+                        <div class="content">
+                            <img src="./assets/icon-planning.svg" alt="" />
+                            <a>Planning</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdown__title">
+                        <a>Company</a>
+                        <img src="./assets/icon-arrow-down.svg" alt="" />
+                    </div>
+                    <div class="dropdown__contentwrapper">
+                        <a>History</a>
+                        <a>Our Team</a>
+                        <a>Blog</a>
+                    </div>
+                </div>
+
+                <a href="">Carrers</a>
+                <a href="">About</a>
+            </nav>
+        </header>
+        <main class="hero">
+            <div class="hero__illustrationholder">
+                <img
+                    class="mobile"
+                    src="./assets/image-hero-mobile.png"
+                    alt=""
+                />
+            </div>
+            <div class="hero__content">
+                <h1 class="title">Make remote work</h1>
+                <p class="description">
+                    Get your team in sync, no matter your location. Streamline
+                    processes, create team rituals, and watch productivity soar.
+                </p>
+                <a href="" class="cta">Learn More</a>
+
+                <div class="clientsholder">
+                    <img src="./assets/client-audiophile.svg" alt="audiphile" />
+                    <img src="./assets/client-databiz.svg" alt="databiz" />
+                    <img src="./assets/client-meet.svg" alt="meet" />
+                    <img src="./assets/client-maker.svg" alt="maker" />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

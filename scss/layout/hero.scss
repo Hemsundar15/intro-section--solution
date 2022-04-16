@@ -1,0 +1,34 @@
+@use "../abstracts";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__illustrationholder {
+        .mobile {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 52px 16px;
+
+        .cta {
+            margin-top: 28px;
+            display: inline-block;
+            font-size: 18px;
+            padding: 14px 22px;
+            border-radius: 10px;
+            color: abstracts.$white--clr;
+            background-color: abstracts.$black--clr;
+        }
+
+        .clientsholder {
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
